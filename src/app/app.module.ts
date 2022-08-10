@@ -13,6 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MyPagesComponent } from './my-pages/my-pages.component';
 import { ButtonComponent } from './button/button.component';
 import { PageItemComponent } from './page-item/page-item.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { PageItemComponent } from './page-item/page-item.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FroalaEditorModule.forRoot(), FroalaViewModule.forRoot()
+    FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(), FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
