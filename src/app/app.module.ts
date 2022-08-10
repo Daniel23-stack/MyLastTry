@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from "@angular/common/http";
 
 //froala import
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
@@ -25,6 +26,7 @@ import { PageItemComponent } from './page-item/page-item.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FroalaEditorModule.forRoot(), FroalaViewModule.forRoot()
   ],
   providers: [],
