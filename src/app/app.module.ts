@@ -14,6 +14,8 @@ import { MyPagesComponent } from './my-pages/my-pages.component';
 import { ButtonComponent } from './button/button.component';
 import { PageItemComponent } from './page-item/page-item.component';
 import {FormsModule} from "@angular/forms";
+import { BackgroundChangeInputComponent } from './background-change-input/background-change-input.component';
+import { CreatedPageItemComponent } from './created-page-item/created-page-item.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import {FormsModule} from "@angular/forms";
     NavbarComponent,
     MyPagesComponent,
     ButtonComponent,
-    PageItemComponent
+    PageItemComponent,
+    BackgroundChangeInputComponent,
+    CreatedPageItemComponent
   ],
   imports: [
     BrowserModule,

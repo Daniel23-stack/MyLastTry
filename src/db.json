@@ -20,5 +20,12 @@
       "pageName": "Home Page four",
       "pageDescription": "this is the home page and its contents"
     }
+  ],
+  "pagePreviews": [
+    {
+      "pageLogo": "",
+      "pageBackgroundPic": "",
+      "pageContents":"this is the page contents for Previewing"
+    }
   ]
 }
