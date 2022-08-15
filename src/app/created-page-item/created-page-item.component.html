@@ -1,0 +1,21 @@
+<div class="container">
+  <nav class="navbar navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <h5 class="text-center pull-right">this is the hader</h5>
+        <img src="{{createdPaige.pageLogo}}" alt="" width="90" height="80">
+      </a>
+    </div>
+  </nav>
+  <div class="container mt-1">
+    <div class="row" style="height:500px; background-image: url({{createdPaige.pageBackgroundPic}})">
+      <div class="section-out-page">
+        <p class="justify-content-around">{{createdPaige.pageContents}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 text-center">
+    <button href="#" class="btn btn-info mt-1 mb-2">Add to OnBoarding</button>
+    <button (click)="deleteMyCreatedPage(createdPaige)" class="btn btn-danger mt-1 m-1 mb-2">Delete Page</button>
+  </div>
+</div>

@@ -16,6 +16,7 @@ import { PageItemComponent } from './page-item/page-item.component';
 import {FormsModule} from "@angular/forms";
 import { BackgroundChangeInputComponent } from './background-change-input/background-change-input.component';
 import { CreatedPageItemComponent } from './created-page-item/created-page-item.component';
+import { PublishButtonComponent } from './publish-button/publish-button.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CreatedPageItemComponent } from './created-page-item/created-page-item.
     ButtonComponent,
     PageItemComponent,
     BackgroundChangeInputComponent,
-    CreatedPageItemComponent
+    CreatedPageItemComponent,
+    PublishButtonComponent
   ],
   imports: [
     BrowserModule,
