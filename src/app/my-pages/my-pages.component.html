@@ -1,0 +1,12 @@
+<app-navbar (onAddPage)="AddPage($event)" (onCreatedPage)="AddCreatedPage($event)"></app-navbar>
+
+<app-page-item *ngFor="let page of pages" [page]="page" (onClickedPageDelete)="deletePage(page)"></app-page-item>
+
+<h4 class="legend mt-1 mb-1 text-center">CREATED PAGES</h4>
+<app-created-page-item *ngFor="let myPage of created" [createdPaige]="myPage" (onClickedCreatedPageDelete)="deletePageCreated(myPage)"></app-created-page-item>
+<h4 class="legend mt-1 mb-1 text-center">OnBoarding</h4>
+<app-on-boarding></app-on-boarding>
+
+
+
+
