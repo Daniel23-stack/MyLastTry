@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-add-onboarding',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddOnboardingComponent implements OnInit {
 
+  // @ts-ignore
+  @Input() text: string;
+  @Output() addOnBoardingClk = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
   }
+  AddOnBoarding(){
+    this.addOnBoardingClk.emit();
 
+  }
 }

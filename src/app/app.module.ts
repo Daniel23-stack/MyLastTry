@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from "@angular/common/http";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 
 //froala import
@@ -20,7 +21,7 @@ import { CreatedPageItemComponent } from './created-page-item/created-page-item.
 import { PublishButtonComponent } from './publish-button/publish-button.component';
 import { OnBoardingComponent } from './on-boarding/on-boarding.component';
 import {ButtonModule} from "primeng/button";
-import {CarouselModule} from "primeng/carousel";
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AddOnboardingComponent } from './add-onboarding/add-onboarding.component';
 
 @NgModule({
@@ -43,6 +44,7 @@ import { AddOnboardingComponent } from './add-onboarding/add-onboarding.componen
     AppRoutingModule,
     HttpClientModule,
     CarouselModule,
+    BrowserAnimationsModule,
     FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(), FormsModule, ButtonModule, CarouselModule
   ],
   providers: [],
