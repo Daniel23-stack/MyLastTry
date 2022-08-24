@@ -1,135 +1,209 @@
-import {Component, HostListener, Input, OnInit, ViewEncapsulation} from '@angular/core';
-// @ts-ignore
-import FroalaEditor from 'froala-editor';
-declare var $ :any;
+
+import { Subscription } from "rxjs";
+import { Component, EventEmitter, Output, ViewEncapsulation, Input, OnInit, OnDestroy, HostListener, ViewChild, ElementRef } from "@angular/core";
+import FroalaEditor from "froala-editor";
+declare var $: any;
+// declare var FroalaEditor: any;
 
 
 @Component({
-  selector: "app-froala",
+  selector: 'app-froala',
   encapsulation: ViewEncapsulation.None,
-  templateUrl: "./froala.component.html",
-  styleUrls: ["./froala.component.css"]
+  templateUrl: './froala.component.html',
+  styleUrls: ['./froala.component.css']
 })
-export class FroalaComponent implements OnInit {
+export class FroalaComponent  implements OnInit, OnDestroy  {
+  public visible = false;
+  public visibleAnimate = false;
 
-  @Input() MypageContents:any = "";
 
-  public content:any = "This is my pre defined content";
+  private subscriptions: Subscription[] = [];
 
-  public object: Object = {
-    charCounterCount: true,
-    toolbarButtons: ['bold', 'italic', 'underline', 'paragraphFormat','insert_template'],
-    toolbarButtonsXS: ['bold', 'italic', 'underline', 'paragraphFormat','insert_template'],
-    toolbarButtonsSM: ['bold', 'italic', 'underline', 'paragraphFormat','insert_template'],
-    toolbarButtonsMD: ['bold', 'italic', 'underline', 'paragraphFormat','insert_template'],
-  };
+
+  public options: any;
+
+
+  @Input() content: any;
+  @Input() toggleedit: any;
+  @Input() hidebutton: any;
+  @Input() componentid: any;
+
+  @Output() contentanswer = new EventEmitter();
+
+  // @ts-ignore
+  @ViewChild('container', { read: ElementRef, static: true }) container: ElementRef;
+
 
   constructor() { }
 
   ngOnInit(): void {
-
-    FroalaEditor.DefineIcon("insert_template", {NAME: "plus", SVG_KEY: "add"});
-    FroalaEditor.RegisterCommand('insert_template', {
-      title: 'Hello',
+    FroalaEditor.DefineIcon("insert_template", { NAME: "plus", SVG_KEY: "add" });
+    FroalaEditor.RegisterCommand("insert_template", {
+      title: "Insert Template Content",
       focus: false,
       undo: false,
       refreshAfterCallback: false,
-
+      showOnMobile: false,
       callback: () => {
-        $("#selection_box").show()
-      }
+        if ($("#mymaineditor" + (this.componentid ? this.componentid : "")).hasClass("fr-fullscreen")) {
+          $("#selection_box").css("padding-left", "0px");
+        } else {
+          $("#selection_box").css("padding-left", "0px");
+        }
+
+        $("#selection_box").show();
+      },
     });
 
-  }
+    this.options = {
+      quickInsertEnabled: false,
+      attribution: false,
+      charCounterCount: true,
+      toolbarButtons: {
+        // Key represents the more button from the toolbar.
+        moreText: {
+          // List of buttons used in the group.
+          buttons: ["bold", "italic", "underline", "strikeThrough", "subscript", "superscript", "fontFamily", "fontSize", "textColor", "backgroundColor", "inlineClass", "inlineStyle", "clearFormatting"],
 
-  saveContent(){
-    console.log(this.content)
+          // Alignment of the group in the toolbar.
+          align: "left",
 
-  }
+          // By default, 3 buttons are shown in the main toolbar. The rest of them are available when using the more button.
+          buttonsVisible: 3,
+        },
+        moreParagraph: {
+          buttons: ["alignLeft", "alignCenter", "formatOLSimple", "alignRight", "alignJustify", "formatOL", "formatUL", "paragraphFormat", "paragraphStyle", "lineHeight", "outdent", "indent", "quote"],
+          align: "left",
+          buttonsVisible: 3,
+        },
+        moreRich: {
+          buttons: ["insertLink", "insertImage", "insertVideo", "insert_template", "insertTable", "emoticons", "fontAwesome", "specialCharacters", "embedly", "insertFile", "insertHR"],
+          align: "left",
+          buttonsVisible: 4,
+        },
+        moreMisc: {
+          buttons: ["undo", "redo", "fullscreen", "print", "getPDF", "spellChecker", "selectAll", "html", "help"],
+          align: "right",
+          buttonsVisible: 2,
+        },
+      },
+    };
 
-  @HostListener('window:message', ['$event'])
-  onMessage(e:any) {
-    console.log(e)
-    $("#selection_box").hide()
-
-    this.content += e.data.message
     setTimeout(() => {
-      this.updateSections()
-    }, 1000)
+      this.updateSections();
+    }, 1000);
 
+    // }))
   }
+
+  changeContent(content) {
+    this.updateSections();
+    this.contentanswer.emit(content);
+  }
+
+  focusEditor() {
+    $("#mymaineditor").froalaEditor("events.focus", true);
+  }
+
+  emptyContent() {
+    $("#mymaineditor").froalaEditor("html.set", "");
+  }
+
+  toggleEdit() {
+    this.toggleedit = !this.toggleedit;
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.forEach((elem) => {
+      elem.unsubscribe();
+    });
+  }
+  @HostListener("window:message", ["$event"])
+  onMessage(e) {
+    if (e.origin != "http://localhost:4201") {
+      // set your origin
+      return false;
+    }
+    this.content += e.data.message;
+    this.contentanswer.emit(this.content);
+    $("#selection_box").hide();
+    setTimeout(() => {
+      this.updateSections();
+    }, 1000);
+  }
+
   updateSections() {
     $(".tempbutton").remove();
 
     $("body")
       .find("section")
-      .each((index: any, section : any) => {
+      .each((index, section) => {
         if (index == 0) {
           $(section).before(
             `<div class="tempbutton">
-    <div id="deleteSection` +
+      <div id="deleteSection` +
             index +
             `" class="tempbuttonsingleright">
       <i class="material-icons">
-        delete
+      delete
       </i>
-    </div>
-    </div>`
+      </div>
+      </div>`
           );
         } else {
           $(section).before(
             `<div class="tempbutton">
-    <div id="moveSection` +
+      <div id="moveSection` +
             index +
             `" class="tempbuttonsingle">
       <i class="material-icons">
-        keyboard_arrow_up
+      keyboard_arrow_up
       </i>
-    </div>
-    <div id="deleteSection` +
+      </div>
+      <div id="deleteSection` +
             index +
             `" class="tempbuttonsingleright">
       <i class="material-icons">
-        delete
+      delete
       </i>
-    </div>
-    </div>`
+      </div>
+      </div>`
           );
         }
 
-        $(`#moveSection` + index).click((event:any) => {
+        $(`#moveSection` + index).click((event) => {
           var elementbottom = $(event.currentTarget).parent().nextAll("section").first();
           var elementtop = $(event.currentTarget).parent().prevAll("section").first();
           elementtop.before(elementbottom);
           this.updateSections();
         });
 
-        $(`#deleteSection` + index).click((event:any) => {
+        $(`#deleteSection` + index).click((event) => {
           $(event.currentTarget).parent().nextAll("section").first().remove();
           this.updateSections();
         });
       });
 
-    $("body")
-      .find("footer")
-      .each((index: any, footer: any) => {
+    $("body").find("footer").each((index, footer) => {
         $(footer).before(
           `<div class="tempbutton">
-    <div id="deleteFooter` +
+      <div id="deleteFooter` +
           index +
-          `" class="tempbuttonsingleright">
-      <i class="material-icons">
-        delete
-      </i>
-    </div>
-    </div>`
+          `" class="tempbuttonsingleright"><i class="material-icons">delete</i></div></div>`
         );
 
-        $(`#deleteFooter` + index).click((event: any) => {
+        $(`#deleteFooter` + index).click((event) => {
           $(event.currentTarget).parent().nextAll("footer").first().remove();
           this.updateSections();
         });
       });
   }
 }
+
+
+
+
+
+
+
 

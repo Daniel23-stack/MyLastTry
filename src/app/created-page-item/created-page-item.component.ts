@@ -21,4 +21,8 @@ export class CreatedPageItemComponent implements OnInit {
   deleteMyCreatedPage(myPage){
     this.onClickedCreatedPageDelete.emit(myPage)
   }
+
+  pushToOnBoarding() {
+
+  }
 }
