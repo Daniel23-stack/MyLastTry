@@ -21,9 +21,9 @@ export class FroalaComponent  implements OnInit, OnDestroy  {
 
 
   public options: any;
+  childData : string = " this is the string";
 
-
-  @Input() content: any;
+  @Input() content2: any;
   @Input() toggleedit: any;
   @Input() hidebutton: any;
   @Input() componentid: any;
@@ -32,6 +32,7 @@ export class FroalaComponent  implements OnInit, OnDestroy  {
 
   // @ts-ignore
   @ViewChild('container', { read: ElementRef, static: true }) container: ElementRef;
+  @Output() paigeContents: any  = new EventEmitter<any>();
 
 
   constructor() { }
@@ -124,8 +125,8 @@ export class FroalaComponent  implements OnInit, OnDestroy  {
       // set your origin
       return false;
     }
-    this.content += e.data.message;
-    this.contentanswer.emit(this.content);
+    this.content2 += e.data.message;
+    this.contentanswer.emit(this.content2);
     $("#selection_box").hide();
     setTimeout(() => {
       this.updateSections();
@@ -199,11 +200,5 @@ export class FroalaComponent  implements OnInit, OnDestroy  {
       });
   }
 }
-
-
-
-
-
-
 
 

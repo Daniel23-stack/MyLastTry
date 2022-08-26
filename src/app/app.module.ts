@@ -27,7 +27,7 @@ import { AddOnboardingComponent } from './add-onboarding/add-onboarding.componen
 @NgModule({
   declarations: [
     AppComponent,
-    FroalaComponent,
+     FroalaComponent,
     NavbarComponent,
     MyPagesComponent,
     ButtonComponent,

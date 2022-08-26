@@ -25,9 +25,10 @@
 <!--  <iframe src="http://localhost:9000" style="height: 100%;width: 100%;" frameborder="0"></iframe>-->
 <!--</div>-->
 
-<div id="onboard_box" class="selectorBox">
-  <iframe src="http://localhost:55602" style="height: 300px;width: 100%;" frameborder="0"></iframe>
-</div>
+<!--<div id="onboard_box" class="selectorBox">-->
+<!--  <iframe src="http://localhost:55602" style="height: 300px;width: 100%;" frameborder="0"></iframe>-->
+<!--</div>-->
+
 
 <!--modal-->
 <form (ngSubmit)="onPublish()">
@@ -53,7 +54,11 @@
               </div>
             </div>
             <div class="mb-3">
-              <app-froala></app-froala>
+<!--              <div class="mb-3 text-center">-->
+<!--                <label for="exampleFormControlTextarea1" class="form-label text-center ">Content</label>-->
+<!--                <textarea [froalaEditor] [(froalaModel)]="pageContents"    class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>-->
+<!--              </div>-->
+              <app-froala [content2]="pageContents"></app-froala>
             </div>
         </div>
         <div class="modal-footer">
@@ -65,6 +70,8 @@
   </div>
 </div>
 </form>
+
+
 
 
 <!--modal-->
