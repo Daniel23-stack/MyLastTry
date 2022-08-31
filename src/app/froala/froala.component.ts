@@ -23,7 +23,7 @@ export class FroalaComponent  implements OnInit, OnDestroy  {
   public options: any;
   childData : string = " this is the string";
 
-  @Input() content2: any;
+  @Input() content: any;
   @Input() toggleedit: any;
   @Input() hidebutton: any;
   @Input() componentid: any;
@@ -59,6 +59,9 @@ export class FroalaComponent  implements OnInit, OnDestroy  {
     this.options = {
       quickInsertEnabled: false,
       attribution: false,
+      imageUploadURL:  "https://pav.compute.inspirze.com/api/s3froalaimage",
+      videoUploadURL:  "https://pav.compute.inspirze.com/api/s3froalavideo",
+      fileUploadURL:  "https://pav.compute.inspirze.com/api/s3froalafile",
       charCounterCount: true,
       toolbarButtons: {
         // Key represents the more button from the toolbar.
@@ -121,12 +124,13 @@ export class FroalaComponent  implements OnInit, OnDestroy  {
   }
   @HostListener("window:message", ["$event"])
   onMessage(e) {
+
     if (e.origin != "http://localhost:4201") {
       // set your origin
       return false;
     }
-    this.content2 += e.data.message;
-    this.contentanswer.emit(this.content2);
+    this.content += e.data.message;
+    this.contentanswer.emit(this.content);
     $("#selection_box").hide();
     setTimeout(() => {
       this.updateSections();

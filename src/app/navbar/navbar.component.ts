@@ -66,7 +66,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     this.pageDescription = "";
   }
   ngAfterViewInit(): void {
-    this.pageContents = this.froo.content2;
+    this.pageContents = this.froo.content;
     this.cd.detectChanges();
   }
 
@@ -96,6 +96,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   }
 
   onPublish() {
+    console.log(this.pageContents)
     if(!this.pageContents){
       alert('Please Page Contents');
       return;

@@ -58,7 +58,8 @@
 <!--                <label for="exampleFormControlTextarea1" class="form-label text-center ">Content</label>-->
 <!--                <textarea [froalaEditor] [(froalaModel)]="pageContents"    class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>-->
 <!--              </div>-->
-              <app-froala [content2]="pageContents"></app-froala>
+              <app-froala [content]="pageContents" (contentanswer)="pageContents = $event"></app-froala>
+              <pre>{{pageContents | json}}</pre>
             </div>
         </div>
         <div class="modal-footer">
