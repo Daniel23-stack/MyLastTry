@@ -1,36 +1,44 @@
 {
   "pages": [
     {
-      "pageName": "fgrfgdf",
-      "pageDescription": "GDGDSGsDGDS",
-      "id": 1
+      "pageName": "vwaxss",
+      "pageDescription": "aasvsa",
+      "id": 2
     }
   ],
   "CreatedPages": [],
   "OnBoardingPages": [
     {
-      "id": 1,
-      "paigeLogo": "",
-      "onBoardingBackPic": "",
-      "onBoardingContents": "this is the froala blocks"
+      "pageContents": "",
+      "id": 1
     },
     {
-      "id": 2,
-      "paigeLogo": "",
-      "onBoardingBackPic": "",
-      "onBoardingContents": "this is the froala blocks"
+      "pageContents": "",
+      "id": 2
     },
     {
-      "id": 3,
-      "paigeLogo": "",
-      "onBoardingBackPic": "",
-      "onBoardingContents": "this is the froala blocks"
+      "pageContents": "",
+      "id": 3
     },
     {
-      "id": 4,
-      "paigeLogo": "",
-      "onBoardingBackPic": "",
-      "onBoardingContents": "this is the froala blocks"
+      "pageContents": "",
+      "id": 4
+    },
+    {
+      "pageContents": "",
+      "id": 5
+    },
+    {
+      "pageContents": "",
+      "id": 6
+    },
+    {
+      "pageContents": "",
+      "id": 7
+    },
+    {
+      "pageContents": "",
+      "id": 8
     }
   ]
 }

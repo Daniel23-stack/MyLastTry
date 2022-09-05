@@ -1,7 +1,14 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { AngularFullpageModule } from '@fullpage/angular-fullpage';
+import { SwiperModule } from 'swiper/angular';
+import { NgxDynamicCarouselModule } from "ngx-dynamic-carousel";
+
+// @ts-ignore
+
+
 
 
 //froala import
@@ -21,13 +28,14 @@ import { CreatedPageItemComponent } from './created-page-item/created-page-item.
 import { PublishButtonComponent } from './publish-button/publish-button.component';
 import { OnBoardingComponent } from './on-boarding/on-boarding.component';
 import {ButtonModule} from "primeng/button";
-import { CarouselModule } from 'ngx-owl-carousel-o';
+import {CarouselModule} from 'primeng/carousel';
 import { AddOnboardingComponent } from './add-onboarding/add-onboarding.component';
+import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
 
 @NgModule({
   declarations: [
     AppComponent,
-     FroalaComponent,
+    FroalaComponent,
     NavbarComponent,
     MyPagesComponent,
     ButtonComponent,
@@ -38,15 +46,21 @@ import { AddOnboardingComponent } from './add-onboarding/add-onboarding.componen
     OnBoardingComponent,
     AddOnboardingComponent,
 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     CarouselModule,
+    AngularFullpageModule,
     BrowserAnimationsModule,
-    FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(), FormsModule, ButtonModule, CarouselModule
+    SwiperModule,
+    NgxDynamicCarouselModule,
+    FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(), FormsModule, ButtonModule, CarouselModule, MdbCarouselModule
   ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

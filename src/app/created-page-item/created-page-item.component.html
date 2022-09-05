@@ -1,23 +1,46 @@
 <form (ngSubmit)="pushToOnBoarding()">
 <div class="container">
-  <nav class="navbar navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <h5 class="text-center pull-right"></h5>
-        <img src="{{createdPaige.pageLogo}}" alt="LOGO" width="90" height="80">
-      </a>
-    </div>
-  </nav>
-  <div class="container mt-1">
-    <div class="row" style="height:500px; background-image: url({{createdPaige.pageBackgroundPic}})">
-      <div class="section-out-page">
-        <p class="justify-content-around"></p>
+<!--  <nav class="navbar navbar-light bg-light">-->
+<!--    <div class="container">-->
+<!--      <a class="navbar-brand" href="#">-->
+<!--        <h5 class="text-center pull-right"></h5>-->
+<!--        <img src="{{createdPaige.pageLogo}}" alt="LOGO" width="90" height="80">-->
+<!--      </a>-->
+<!--    </div>-->
+<!--  </nav>-->
+<!--  <div class="container mt-1">-->
+<!--    <div class="row" style="height:500px; background-image: url({{createdPaige.pageBackgroundPic}})">-->
+<!--      <div class="section-out-page">-->
+<!--        <p class="justify-content-around"></p>-->
+<!--      </div>-->
+<!--      <div [innerHTML]="createdPaige.pageContents"></div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <div [innerHTML]="createdPaige.pageContents"></div>
       </div>
-      <div [innerHTML]="createdPaige.pageContents"></div>
     </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <div [innerHTML]="createdPaige.pageContents"></div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
+
   <div class="col-md-12 text-center">
-    <app-add-onboarding></app-add-onboarding>
+    <button type="submit" (click)="AddOnBoarding()" class="btn btn-info mt-1 mb-2">Edit OnBoarding Page</button>
     <button (click)="deleteMyCreatedPage(createdPaige)" class="btn btn-danger mt-1 m-1 mb-2">Delete Page</button>
   </div>
 </div>

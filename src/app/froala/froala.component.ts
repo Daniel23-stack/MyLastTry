@@ -169,7 +169,7 @@ export class FroalaComponent  implements OnInit, OnDestroy  {
             index +
             `" class="tempbuttonsingleright">
       <i class="material-icons">
-      delete
+
       </i>
       </div>
       </div>`

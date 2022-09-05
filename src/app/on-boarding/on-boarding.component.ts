@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {OwlOptions} from "ngx-owl-carousel-o";
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {OnBoardingPage} from "../OnBoardingPage";
+
 
 @Component({
   selector: 'app-on-boarding',
@@ -7,13 +8,22 @@ import {OwlOptions} from "ngx-owl-carousel-o";
   styleUrls: ['./on-boarding.component.css']
 })
 export class OnBoardingComponent implements OnInit {
-  products: any;
-  responsiveOptions: any;
 
 
-  constructor() { }
+  // @ts-ignore
+  @Input() createdOnBoarding: OnBoardingPage
 
-  ngOnInit(): void {
+  @Output() ondeletedOnBoardingPage: EventEmitter<OnBoardingPage> = new EventEmitter();
+
+
+  constructor() {
   }
 
+  ngOnInit(): void {
+
+  }
+
+  onClickDeleteOnBoarding(myOnboardingPages) {
+    this.ondeletedOnBoardingPage.emit(myOnboardingPages);
+  }
 }

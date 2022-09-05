@@ -28,7 +28,7 @@ export class MyPagesComponent implements OnInit {
   constructor(private  pageService:PageService, public createdPage: CreatedPageService, private onboardingPageService:OnBoardingService) { }
 
   ngOnInit(): void {
-    this.onboardingPageService.getOnBoardingPages().subscribe((onBoardingPages) =>(this.onBoardingPages= onBoardingPages));
+    this.onboardingPageService.getOnBoardingPages().subscribe((onBoardingPages) =>(this.onBoardingPages = onBoardingPages));
     this.pageService.getPages().subscribe((pages) =>(this.pages = pages));
     this.createdPage.getPages().subscribe((createds) =>this.created = createds);
 
@@ -39,11 +39,17 @@ export class MyPagesComponent implements OnInit {
   deletePage(page: Page) {
     this.pageService.deletePage(page).subscribe(() =>(this.pages = this.pages.filter((p) => p.id !==page.id )));
   }
+  deletePageOnBoarding(onBoardingPage: OnBoardingPage){
+    this.onboardingPageService.deletePageOnBoarding(onBoardingPage).subscribe(() =>(this.onBoardingPages = this.onBoardingPages.filter((ob) => ob.id !==onBoardingPage.id)));
+  }
 
   AddPage(page: Page) {
     this.pageService.AddPage(page).subscribe((page)=>(this.pages.push(page)))
   }
   AddCreatedPage(createdPage: CreatedPage) {
     this.createdPage.AddCreatedPage(createdPage).subscribe((createdPage) =>(this.created.push(createdPage)));
+  }
+  AddCreatedOnBoarding(createonBoarding: OnBoardingPage){
+    this.onboardingPageService.AddCreatedOnboarding(createonBoarding).subscribe((createonBoarding)=>(this.onBoardingPages.push(createonBoarding)));
   }
 }
