@@ -51,6 +51,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   @Output() onCreatedPage: EventEmitter<CreatedPage> = new EventEmitter()
 
 
+
   onSubmit() {
     if(!this.pageName){
       alert('Please Add A Page');

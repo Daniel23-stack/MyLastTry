@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output, } from '@angular/core';
 import {CreatedPage} from "../CreatedPage";
 import {OnBoardingPage} from "../OnBoardingPage";
+import {OwlOptions} from "ngx-owl-carousel-o";
 
 
 
@@ -10,7 +11,6 @@ import {OnBoardingPage} from "../OnBoardingPage";
   styleUrls: ['./created-page-item.component.css']
 })
 export class CreatedPageItemComponent implements OnInit {
-
 
 
   // @ts-ignore
@@ -39,7 +39,7 @@ export class CreatedPageItemComponent implements OnInit {
     this.onClickedCreatedPageDelete.emit(myPage)
   }
   //add to onboarding
-  i:any;
+
   AddOnBoarding() {
     console.log()
   }

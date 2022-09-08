@@ -1,12 +1,38 @@
 {
   "pages": [
     {
-      "pageName": "vwaxss",
-      "pageDescription": "aasvsa",
-      "id": 2
+      "pageName": "maxax",
+      "pageDescription": "xaX",
+      "id": 1
     }
   ],
-  "CreatedPages": [],
+  "CreatedPages": [
+    {
+      "pageContents": "<div class=\"tempbutton\">\n      <div class=\"tempbuttonsingleright\" id=\"deleteSection0\">\n      <i class=\"material-icons\">\n      delete\n      </i>\n      </div>\n      </div><section class=\"fdb-block team-1\"><div class=\"container\"><div class=\"row text-center justify-content-center\"><div class=\"col-8\"><h1>Our Team</h1><p class=\"lead\">Far far away, behind the word mountains, far from the countries.</p></div></div><div class=\"row-50\"><br></div><div class=\"row\"><div class=\"col-sm-3 text-left\"><div class=\"fdb-box p-0\"><img alt=\"image\" class=\"img-fluid rounded-0 fr-fic fr-dii\" src=\"https://blocks.inspirze.com/assets/imgs/people/1.jpg\"><div class=\"content p-3\"><h3><strong>Sara Doe</strong></h3><p>Founder</p></div></div></div><div class=\"col-sm-3 text-left\"><div class=\"fdb-box p-0\"><img alt=\"image\" class=\"img-fluid rounded-0 fr-fic fr-dii\" src=\"https://blocks.inspirze.com/assets/imgs/people/2.jpg\"><div class=\"content p-3\"><h3><strong>Sara Doe</strong></h3><p>Founder</p></div></div></div><div class=\"col-sm-3 text-left\"><div class=\"fdb-box p-0\"><img alt=\"image\" class=\"img-fluid rounded-0 fr-fic fr-dii\" src=\"https://blocks.inspirze.com/assets/imgs/people/3.jpg\"><div class=\"content p-3\"><h3><strong>Sara Doe</strong></h3><p>Founder</p></div></div></div><div class=\"col-sm-3 text-left\"><div class=\"fdb-box p-0\"><img alt=\"image\" class=\"img-fluid rounded-0 fr-fic fr-dii\" src=\"https://blocks.inspirze.com/assets/imgs/people/6.jpg\"><div class=\"content p-3\"><h3><strong>Sara Doe</strong></h3><p>Founder</p></div></div></div></div></div></section>",
+      "id": 3
+    },
+    {
+      "pageContents": "<section _ngcontent-c75=\"\" class=\"fdb-block\"><div _ngcontent-c75=\"\" class=\"container\"><div _ngcontent-c75=\"\" class=\"row align-items-center\"><div _ngcontent-c75=\"\" class=\"col-10 col-sm-6 m-auto col-md-4 pb-4 pb-md-0\"><img _ngcontent-c75=\"\" alt=\"image\" class=\"img-fluid rounded-0\" src=\"https://blocks.inspirze.com/assets/imgs/draws/chatting.svg\"></div><div _ngcontent-c75=\"\" class=\"col-12 ml-auto col-md-6 col-lg-5\"><h1 _ngcontent-c75=\"\">Design Blocks</h1><p _ngcontent-c75=\"\" class=\"lead\">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p><p _ngcontent-c75=\"\"><a _ngcontent-c75=\"\" class=\"btn btn-primary mt-4 mb-5 mb-md-0\" href=\"https://www.froala.com\">Download</a></p></div></div></div></section>",
+      "id": 4
+    },
+    {
+      "pageLogo": "",
+      "pageBackgroundPic": "",
+      "pageContents": "<section _ngcontent-c65=\"\" class=\"fdb-block\"><div _ngcontent-c65=\"\" class=\"container\"><div _ngcontent-c65=\"\" class=\"row\"><div _ngcontent-c65=\"\" class=\"col text-center\"><h1 _ngcontent-c65=\"\">Froala Design Blocks</h1><div _ngcontent-c65=\"\" class=\"row text-left pt-4\"><div _ngcontent-c65=\"\" class=\"col-12 col-md-6\"><p _ngcontent-c65=\"\" class=\"lead\">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place far far away.</p></div><div _ngcontent-c65=\"\" class=\"col-12 col-md-6\"><p _ngcontent-c65=\"\" class=\"lead\">Separated they live in Bookmarksgrove right at the coast of the Semantics, far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast.</p></div></div></div></div></div></section>",
+      "id": 5
+    },
+    {
+      "pageContents": "<section _ngcontent-c3=\"\" class=\"fdb-block\"><div _ngcontent-c3=\"\" class=\"container\"><div _ngcontent-c3=\"\" class=\"row justify-content-center\"><div _ngcontent-c3=\"\" class=\"col-12 col-md-6 text-center\"><h1 _ngcontent-c3=\"\">Call to Action</h1><p _ngcontent-c3=\"\" class=\"lead\"> Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts </p><p _ngcontent-c3=\"\" class=\"mt-5 mt-sm-4\"><a _ngcontent-c3=\"\" class=\"btn btn-secondary\" href=\"https://www.froala.com\">Download</a></p></div></div></div></section>",
+      "id": 6
+    },
+    {
+      "pageLogo": "",
+      "pageBackgroundPic": "",
+      "pageContents": "<section _ngcontent-c6=\"\" class=\"fdb-block\"><div _ngcontent-c6=\"\" class=\"container\"><div _ngcontent-c6=\"\" class=\"row justify-content-center\"><div _ngcontent-c6=\"\" class=\"col-12 col-md-8 text-center\"><h1 _ngcontent-c6=\"\">Far far away, behind the word mountains, far from</h1><p _ngcontent-c6=\"\" class=\"mt-5\"><a _ngcontent-c6=\"\" class=\"btn btn-secondary\" href=\"https://www.froala.com\">Download</a></p></div></div></div></section>",
+      "id": 7
+    }
+  ],
+  "showingOnBoarding": [],
   "OnBoardingPages": [
     {
       "pageContents": "",
@@ -23,22 +49,6 @@
     {
       "pageContents": "",
       "id": 4
-    },
-    {
-      "pageContents": "",
-      "id": 5
-    },
-    {
-      "pageContents": "",
-      "id": 6
-    },
-    {
-      "pageContents": "",
-      "id": 7
-    },
-    {
-      "pageContents": "",
-      "id": 8
     }
   ]
 }

@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container text-center">
+    <h3 class="navbar-brand text-center" href="#">OnBoarding</h3>
+  </div>
+</nav>
+<div class="container">
+<p-carousel [value]="showBoard" [showIndicators]="false" [numVisible]="1" [numScroll]="1" [circular]="false" [responsiveOptions]="responsiveOptions">
+  <ng-template let-show pTemplate="item">
+    <div class="product-item">
+      <div class="product-item-content">
+        <div class="mb-3">
+         <div [innerHTML]="show.pageContents"></div>
+        </div>
+        <div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>
+</div>
+
+
+
+

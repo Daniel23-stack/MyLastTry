@@ -28,9 +28,12 @@ import { CreatedPageItemComponent } from './created-page-item/created-page-item.
 import { PublishButtonComponent } from './publish-button/publish-button.component';
 import { OnBoardingComponent } from './on-boarding/on-boarding.component';
 import {ButtonModule} from "primeng/button";
-import {CarouselModule} from 'primeng/carousel';
+
 import { AddOnboardingComponent } from './add-onboarding/add-onboarding.component';
 import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
+
+import { TheShowComponent } from './the-show/the-show.component';
+import {CarouselModule} from "primeng/carousel";
 
 @NgModule({
   declarations: [
@@ -45,20 +48,21 @@ import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
     PublishButtonComponent,
     OnBoardingComponent,
     AddOnboardingComponent,
+    TheShowComponent,
 
 
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    CarouselModule,
-    AngularFullpageModule,
-    BrowserAnimationsModule,
-    SwiperModule,
-    NgxDynamicCarouselModule,
-    FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(), FormsModule, ButtonModule, CarouselModule, MdbCarouselModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        CarouselModule,
+        AngularFullpageModule,
+        BrowserAnimationsModule,
+        SwiperModule,
+        NgxDynamicCarouselModule,
+        FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(), FormsModule, ButtonModule, CarouselModule, MdbCarouselModule, CarouselModule, CarouselModule
+    ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
 
   providers: [],

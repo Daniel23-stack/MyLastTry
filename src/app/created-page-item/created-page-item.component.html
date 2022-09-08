@@ -18,29 +18,29 @@
 <!--  </div>-->
 
 
-  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="10000">
-        <div [innerHTML]="createdPaige.pageContents"></div>
-      </div>
+<!--  <div>Some tags before</div>-->
+<!--  <owl-carousel-o [options]="customOptions">-->
+<!--    <ng-container >-->
+<!--      <ng-template carouselSlide >-->
+<!--        <div [innerHTML]="createdPaige.pageContents"></div>-->
+<!--      </ng-template>-->
+<!--    </ng-container>-->
+<!--  </owl-carousel-o>-->
+<!--  <div>Some tags after</div>-->
+
+
+  <div class="card text-center">
+    <div class="card-header"></div>
+    <div class="card-body">
+      <div [innerHTML]="createdPaige.pageContents"></div>
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="10000">
-        <div [innerHTML]="createdPaige.pageContents"></div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    <div class="card-footer text-muted"></div>
   </div>
 
+
+
   <div class="col-md-12 text-center">
-    <button type="submit" (click)="AddOnBoarding()" class="btn btn-info mt-1 mb-2">Edit OnBoarding Page</button>
+    <button type="submit" (click)="AddOnBoarding()" class="btn btn-info mt-1 mb-2">Edit OnBoarding</button>
     <button (click)="deleteMyCreatedPage(createdPaige)" class="btn btn-danger mt-1 m-1 mb-2">Delete Page</button>
   </div>
 </div>

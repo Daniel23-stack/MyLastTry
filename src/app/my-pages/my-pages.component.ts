@@ -6,6 +6,7 @@ import {CreatedPageService} from "../services/created-page.service";
 import {CreatedPage} from "../CreatedPage";
 import {OnBoardingPage} from "../OnBoardingPage";
 import {OnBoardingService} from "../services/on-boarding.service";
+import {ShowingOnBoardingService} from "../services/showing-on-boarding.service";
 
 
 @Component({
@@ -18,6 +19,8 @@ export class MyPagesComponent implements OnInit {
   pages: Page[] = [];
   created: CreatedPage[] = [];
   onBoardingPages: OnBoardingPage[] = [];
+  showBoard:CreatedPage[] = [];
+
 
 
   //Created pages
@@ -25,12 +28,13 @@ export class MyPagesComponent implements OnInit {
   theContents: any;
   photo: any = '/assets/img/main.png';
 
-  constructor(private  pageService:PageService, public createdPage: CreatedPageService, private onboardingPageService:OnBoardingService) { }
+  constructor(private  pageService:PageService, public createdPage: CreatedPageService, private onboardingPageService:OnBoardingService, private showingOnBoarding:ShowingOnBoardingService) { }
 
   ngOnInit(): void {
     this.onboardingPageService.getOnBoardingPages().subscribe((onBoardingPages) =>(this.onBoardingPages = onBoardingPages));
     this.pageService.getPages().subscribe((pages) =>(this.pages = pages));
     this.createdPage.getPages().subscribe((createds) =>this.created = createds);
+    this.showingOnBoarding.getPages().subscribe((showboards) =>(this.showBoard = showboards))
 
   }
   deletePageCreated(createdPage:CreatedPage){
