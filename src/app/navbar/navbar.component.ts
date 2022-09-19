@@ -116,6 +116,9 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   }
 
 
+  saveEdited() {
+    console.log("page edited")
+  }
 }
 
 

@@ -37,22 +37,22 @@
     <div class="modal-dialog modal-xl  modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">ADD PAGE CONTENTS</h5>
+          <h5 class="modal-title" id="exampleModalLabel">EDIT PAGE CONTENTS</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <div class="mb-3">
-              <label for="inputGroupFile04" class="form-label">PAGE LOGO</label>
-              <div class="input-group mt-0">
-                <input (change)="logoUpload($event)" type="file"  class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">UPLOAD</button>
-              </div>
-              <label for="inputGroupFile04" class="form-label mt-1">PAGE BACKGROUND PICTURE</label>
-              <div class="input-group mt-0">
-                <input (change)="pageBackgroundUpload($event)"  type="file" class="form-control" id="inputGroupFile05" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon05">UPLOAD</button>
-              </div>
-            </div>
+<!--            <div class="mb-3">-->
+<!--              <label for="inputGroupFile04" class="form-label">PAGE LOGO</label>-->
+<!--              <div class="input-group mt-0">-->
+<!--                <input (change)="logoUpload($event)" type="file"  class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">-->
+<!--                <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">UPLOAD</button>-->
+<!--              </div>-->
+<!--              <label for="inputGroupFile04" class="form-label mt-1">PAGE BACKGROUND PICTURE</label>-->
+<!--              <div class="input-group mt-0">-->
+<!--                <input (change)="pageBackgroundUpload($event)"  type="file" class="form-control" id="inputGroupFile05" aria-describedby="inputGroupFileAddon04" aria-label="Upload">-->
+<!--                <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon05">UPLOAD</button>-->
+<!--              </div>-->
+<!--            </div>-->
             <div class="mb-3">
 <!--              <div class="mb-3 text-center">-->
 <!--                <label for="exampleFormControlTextarea1" class="form-label text-center ">Content</label>-->
@@ -103,4 +103,28 @@
   </div>
 </div>
 </form>
+
+<!--Edit Contents model-->
+<!--<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--  <div class="container-fluid">-->
+<!--    <div class="modal-dialog modal-xl  modal-dialog-scrollable">-->
+<!--      <div class="modal-content">-->
+<!--        <div class="modal-header">-->
+<!--          <h5 class="modal-title" id="exampleModalLabel3">Edit contents</h5>-->
+<!--          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+<!--        </div>-->
+<!--        <div class="modal-body">-->
+
+<!--          <div class="mb-3">-->
+<!--            <app-froala [content]="pageContents" (contentanswer)="pageContents = $event"></app-froala>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="modal-footer">-->
+<!--          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>-->
+<!--          <app-save-button (savedClicked)="saveEdited()"></app-save-button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
 

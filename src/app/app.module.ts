@@ -34,6 +34,7 @@ import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
 
 import { TheShowComponent } from './the-show/the-show.component';
 import {CarouselModule} from "primeng/carousel";
+import { SaveButtonComponent } from './save-button/save-button.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import {CarouselModule} from "primeng/carousel";
     OnBoardingComponent,
     AddOnboardingComponent,
     TheShowComponent,
+    SaveButtonComponent,
 
 
   ],

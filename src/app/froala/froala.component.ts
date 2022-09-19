@@ -57,6 +57,7 @@ export class FroalaComponent  implements OnInit, OnDestroy  {
     });
 
     this.options = {
+      zIndex:2501,
       quickInsertEnabled: false,
       attribution: false,
       imageUploadURL:  "https://pav.compute.inspirze.com/api/s3froalaimage",

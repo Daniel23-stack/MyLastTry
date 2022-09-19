@@ -4,6 +4,7 @@
 
 <h4 class="legend mt-1 mb-1 text-center">OnBoarding Pages</h4>
 <app-created-page-item *ngFor="let myPage of created" [createdPaige]="myPage"  (addOnBoardingClk)="AddCreatedOnBoarding($event)" (onClickedCreatedPageDelete)="deletePageCreated(myPage)"></app-created-page-item>
+<pre>{{created | json}}</pre>
 <!--<h4 class="legend mt-1 mb-1 text-center">OnBoarding</h4>-->
 <!--<app-on-boarding *ngFor="let myOnboardingPages of onBoardingPages"  [createdOnBoarding]="myOnboardingPages" (ondeletedOnBoardingPage)="deletePageOnBoarding(myOnboardingPages)"></app-on-boarding>-->
 

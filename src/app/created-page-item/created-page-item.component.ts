@@ -44,16 +44,14 @@ export class CreatedPageItemComponent implements OnInit {
     console.log()
   }
 
-  pushToOnBoarding() {
-
-    const newOnBoarding = {
-      pageLogo:this.pageLogo,
-      pageBackgroundPic: this.pageBackgroundPic,
-      pageContents: this.pageContents
-
-    }
-    this.addOnBoardingClk.emit(newOnBoarding);
-  }
-
-
+  // pushToOnBoarding() {
+  //
+  //   const newOnBoarding = {
+  //     pageLogo:this.pageLogo,
+  //     pageBackgroundPic: this.pageBackgroundPic,
+  //     pageContents: this.pageContents
+  //
+  //   }
+  //   this.addOnBoardingClk.emit(newOnBoarding);
+  // }
 }
