@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output, } from '@angular/core';
 import {CreatedPage} from "../CreatedPage";
 import {OnBoardingPage} from "../OnBoardingPage";
-import {OwlOptions} from "ngx-owl-carousel-o";
+
 
 
 
@@ -54,4 +54,8 @@ export class CreatedPageItemComponent implements OnInit {
   //   }
   //   this.addOnBoardingClk.emit(newOnBoarding);
   // }
+  cleartextEditor() {
+    this.pageContents = "";
+    console.log("cleared");
+  }
 }

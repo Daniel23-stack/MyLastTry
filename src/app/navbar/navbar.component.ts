@@ -14,7 +14,7 @@ import {ChangeDetectorRef} from "@angular/core";
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit, AfterViewInit {
+export class NavbarComponent implements OnInit{
 
 
   @ViewChild(FroalaComponent ) froo !: FroalaComponent;
@@ -66,10 +66,10 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     this.pageName = "";
     this.pageDescription = "";
   }
-  ngAfterViewInit(): void {
-    this.pageContents = this.froo.content;
-    this.cd.detectChanges();
-  }
+  // ngAfterViewInit(): void {
+  //   this.pageContents = this.froo.content;
+  //   this.cd.detectChanges();
+  // }
 
 
   AddNewLogo() {
@@ -97,14 +97,13 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   }
 
   onPublish() {
-    console.log(this.pageContents)
     if(!this.pageContents){
       alert('Please Page Contents');
       return;
     }
     const newPageCreated = {
-      pageLogo: this.pageLogo,
-      pageBackgroundPic: this.pageBackgroundPic,
+      // pageLogo: this.pageLogo,
+      // pageBackgroundPic: this.pageBackgroundPic,
       pageContents: this.pageContents
 
     };

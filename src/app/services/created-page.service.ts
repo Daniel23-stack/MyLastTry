@@ -16,10 +16,9 @@ export class CreatedPageService {
   getPages(): Observable<CreatedPage[]>{
     return this.http.get<CreatedPage[]>(this.apiUrl)
   }
-  // EditCreatedPage(createdPage :CreatedPage):Observable<CreatedPage>{
-  //   const url = `${this.apiUrl}/${createdPage.id}`
-  //   return this.http.post<CreatedPage>(url)
-  // }
+  EditCreatedPage(id: number, value: any):Observable<any>{
+    return this.http.put(`${this.apiUrl}/${id}`, value);
+  }
 
   deletePageCreated(createdPage:CreatedPage): Observable<CreatedPage>{
     const  url = `${this.apiUrl}/${createdPage.id}`
