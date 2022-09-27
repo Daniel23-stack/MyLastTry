@@ -45,6 +45,8 @@
   </div>
 </div>
 
+<!--submit edited content-->
+<form (ngSubmit)="updateEditedPage()">
 <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="container-fluid">
     <div class="modal-dialog modal-xl  modal-dialog-scrollable">
@@ -61,11 +63,12 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" (click)="cleartextEditor()" data-bs-dismiss="modal">Cancel</button>
-          <app-save-button></app-save-button>
+          <app-save-button (savedClicked)="updateEditedPage()"></app-save-button>
         </div>
       </div>
     </div>
   </div>
 </div>
+</form>
 
 

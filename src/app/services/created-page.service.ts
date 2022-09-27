@@ -13,11 +13,11 @@ export class CreatedPageService {
 
   constructor(private http:HttpClient) { }
 
-  getPages(): Observable<CreatedPage[]>{
+  getCreatedPaige(): Observable<CreatedPage[]>{
     return this.http.get<CreatedPage[]>(this.apiUrl)
   }
-  EditCreatedPage(id: number, value: any):Observable<any>{
-    return this.http.put(`${this.apiUrl}/${id}`, value);
+  EditCreatedPage(editedPage:CreatedPage):Observable<CreatedPage>{
+    return this.http.put<CreatedPage>(this.apiUrl, editedPage);
   }
 
   deletePageCreated(createdPage:CreatedPage): Observable<CreatedPage>{

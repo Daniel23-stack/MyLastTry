@@ -20,9 +20,11 @@ export class CreatedPageItemComponent implements OnInit {
   @Input() createdOnBoarding : OnBoardingPage
 
   @Output() onClickedCreatedPageDelete:EventEmitter<CreatedPage> = new EventEmitter();
+  @Output() onEditedPAge: EventEmitter<CreatedPage> = new EventEmitter()
 
 
   @Output() addOnBoardingClk:EventEmitter<OnBoardingPage>= new EventEmitter();
+
 
   constructor() { }
 
@@ -44,18 +46,18 @@ export class CreatedPageItemComponent implements OnInit {
     console.log()
   }
 
-  // pushToOnBoarding() {
-  //
-  //   const newOnBoarding = {
-  //     pageLogo:this.pageLogo,
-  //     pageBackgroundPic: this.pageBackgroundPic,
-  //     pageContents: this.pageContents
-  //
-  //   }
-  //   this.addOnBoardingClk.emit(newOnBoarding);
-  // }
+  //clearing the text editor
   cleartextEditor() {
-    this.pageContents = "";
+    this.pageContents = ""
     console.log("cleared");
   }
+
+  updateEditedPage() {
+    const newEditedPage ={
+      pageContents: this.pageContents
+    };
+    this.onEditedPAge.emit(newEditedPage);
+    // this.pageContents = ""
+  }
+
 }

@@ -6,7 +6,16 @@
       "id": 1
     }
   ],
-  "CreatedPages": [],
+  "CreatedPages": [
+    {
+      "pageContents": "<p>sdafibquFUBUSFUASBUFBAUB8Q9hfnsah8mjasfa</p>",
+      "id": 2
+    },
+    {
+      "pageContents": "<p>dqwdqwdqwdqdqdqdqd</p>",
+      "id": 3
+    }
+  ],
   "showingOnBoarding": [],
   "OnBoardingPages": []
 }
