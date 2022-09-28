@@ -9,7 +9,7 @@ import {CreatedPage} from "../CreatedPage";
   providedIn: 'root'
 })
 export class CreatedPageService {
-  private  apiUrl = 'http://localhost:5002/CreatedPages'
+  private  apiUrl = 'http://localhost:5002/createdPages'
 
   constructor(private http:HttpClient) { }
 
@@ -17,7 +17,7 @@ export class CreatedPageService {
     return this.http.get<CreatedPage[]>(this.apiUrl)
   }
   EditCreatedPage(editedPage:CreatedPage):Observable<CreatedPage>{
-    return this.http.put<CreatedPage>(this.apiUrl, editedPage);
+    return this.http.put<CreatedPage>(this.apiUrl + `/`+ editedPage.id, editedPage);
   }
 
   deletePageCreated(createdPage:CreatedPage): Observable<CreatedPage>{

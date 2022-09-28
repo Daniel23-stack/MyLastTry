@@ -30,11 +30,13 @@ import { OnBoardingComponent } from './on-boarding/on-boarding.component';
 import {ButtonModule} from "primeng/button";
 
 import { AddOnboardingComponent } from './add-onboarding/add-onboarding.component';
-import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
+
 
 import { TheShowComponent } from './the-show/the-show.component';
 import {CarouselModule} from "primeng/carousel";
 import { SaveButtonComponent } from './save-button/save-button.component';
+import {FieldsetModule} from "primeng/fieldset";
+import {CardModule} from "primeng/card";
 
 @NgModule({
   declarations: [
@@ -63,7 +65,7 @@ import { SaveButtonComponent } from './save-button/save-button.component';
         BrowserAnimationsModule,
         SwiperModule,
         NgxDynamicCarouselModule,
-        FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(), FormsModule, ButtonModule, CarouselModule, MdbCarouselModule, CarouselModule, CarouselModule
+        FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(), FormsModule, ButtonModule, CarouselModule,  CarouselModule, CarouselModule, FieldsetModule, CardModule
     ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
 

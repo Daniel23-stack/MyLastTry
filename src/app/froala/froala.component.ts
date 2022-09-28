@@ -139,70 +139,70 @@ export class FroalaComponent  implements OnInit, OnDestroy  {
   }
 
   updateSections() {
-    $(".tempbutton").remove();
-
-    $("body")
-      .find("section")
-      .each((index, section) => {
-        if (index == 0) {
-          $(section).before(
-            `<div class="tempbutton">
-      <div id="deleteSection` +
-            index +
-            `" class="tempbuttonsingleright">
-      <i class="material-icons">
-      delete
-      </i>
-      </div>
-      </div>`
-          );
-        } else {
-          $(section).before(
-            `<div class="tempbutton">
-      <div id="moveSection` +
-            index +
-            `" class="tempbuttonsingle">
-      <i class="material-icons">
-      keyboard_arrow_up
-      </i>
-      </div>
-      <div id="deleteSection` +
-            index +
-            `" class="tempbuttonsingleright">
-      <i class="material-icons">
-
-      </i>
-      </div>
-      </div>`
-          );
-        }
-
-        $(`#moveSection` + index).click((event) => {
-          var elementbottom = $(event.currentTarget).parent().nextAll("section").first();
-          var elementtop = $(event.currentTarget).parent().prevAll("section").first();
-          elementtop.before(elementbottom);
-          this.updateSections();
-        });
-
-        $(`#deleteSection` + index).click((event) => {
-          $(event.currentTarget).parent().nextAll("section").first().remove();
-          this.updateSections();
-        });
-      });
-
-    $("body").find("footer").each((index, footer) => {
-        $(footer).before(
-          `<div class="tempbutton">
-      <div id="deleteFooter` +
-          index +
-          `" class="tempbuttonsingleright"><i class="material-icons">delete</i></div></div>`
-        );
-
-        $(`#deleteFooter` + index).click((event) => {
-          $(event.currentTarget).parent().nextAll("footer").first().remove();
-          this.updateSections();
-        });
-      });
+    // $(".tempbutton").remove();
+    //
+    // $("body")
+    //   .find("section")
+    //   .each((index, section) => {
+    //     if (index == 0) {
+    //       $(section).before(
+    //         `<div class="tempbutton">
+    //   <div id="deleteSection` +
+    //         index +
+    //         `" class="tempbuttonsingleright">
+    //   <i class="material-icons">
+    //   delete
+    //   </i>
+    //   </div>
+    //   </div>`
+    //       );
+    //     } else {
+    //       $(section).before(
+    //         `<div class="tempbutton">
+    //   <div id="moveSection` +
+    //         index +
+    //         `" class="tempbuttonsingle">
+    //   <i class="material-icons">
+    //   keyboard_arrow_up
+    //   </i>
+    //   </div>
+    //   <div id="deleteSection` +
+    //         index +
+    //         `" class="tempbuttonsingleright">
+    //   <i class="material-icons">
+    //
+    //   </i>
+    //   </div>
+    //   </div>`
+    //       );
+    //     }
+    //
+    //     $(`#moveSection` + index).click((event) => {
+    //       var elementbottom = $(event.currentTarget).parent().nextAll("section").first();
+    //       var elementtop = $(event.currentTarget).parent().prevAll("section").first();
+    //       elementtop.before(elementbottom);
+    //       this.updateSections();
+    //     });
+    //
+    //     $(`#deleteSection` + index).click((event) => {
+    //       $(event.currentTarget).parent().nextAll("section").first().remove();
+    //       this.updateSections();
+    //     });
+    //   });
+    //
+    // $("body").find("footer").each((index, footer) => {
+    //     $(footer).before(
+    //       `<div class="tempbutton">
+    //   <div id="deleteFooter` +
+    //       index +
+    //       `" class="tempbuttonsingleright"><i class="material-icons">delete</i></div></div>`
+    //     );
+    //
+    //     $(`#deleteFooter` + index).click((event) => {
+    //       $(event.currentTarget).parent().nextAll("footer").first().remove();
+    //       this.updateSections();
+    //     });
+    //   });
   }
 }
 

@@ -8,7 +8,7 @@ import {CreatedPage} from "../CreatedPage";
 })
 export class ShowingOnBoardingService {
 
-  private  apiUrl = 'http://localhost:5002/CreatedPages'
+  private  apiUrl = 'http://localhost:5002/createdPages'
 
   constructor(private http:HttpClient) { }
 

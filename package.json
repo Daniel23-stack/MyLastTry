@@ -11,7 +11,6 @@
   },
   "private": true,
   "dependencies": {
-
     "@angular/animations": "^14.0.0",
     "@angular/common": "^14.0.0",
     "@angular/compiler": "^14.0.0",
@@ -26,13 +25,13 @@
     "animate.css": "^4.1.1",
     "bootstrap": "^5.2.0",
     "jquery": "^3.6.0",
-    "json-server": "^0.17.0",
+    "json-server": "^0.4.2",
     "mdb-angular-ui-kit": "^2.3.0",
     "ngx-dynamic-carousel": "^1.0.0",
     "ngx-owl-carousel-o": "^14.0.1",
     "popper.js": "^1.16.1",
     "primeicons": "^5.0.0",
-    "primeng": "^14.0.1",
+    "primeng": "^14.1.2",
     "rxjs": "~7.5.0",
     "swiper": "^8.3.2",
     "tslib": "^2.4.0",

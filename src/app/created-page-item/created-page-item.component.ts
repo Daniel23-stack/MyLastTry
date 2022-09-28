@@ -54,10 +54,11 @@ export class CreatedPageItemComponent implements OnInit {
 
   updateEditedPage() {
     const newEditedPage ={
-      pageContents: this.pageContents
+      pageContents: this.createdPaige.pageContents,
+      id:this.createdPaige.id
     };
     this.onEditedPAge.emit(newEditedPage);
-    // this.pageContents = ""
+
   }
 
 }

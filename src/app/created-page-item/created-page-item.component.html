@@ -60,6 +60,8 @@
           <div class="mb-3">
             <app-froala [content]="createdPaige.pageContents" (contentanswer)="createdPaige.pageContents = $event"></app-froala>
           </div>
+          <pre>{{createdPaige | json}}</pre>
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" (click)="cleartextEditor()" data-bs-dismiss="modal">Cancel</button>

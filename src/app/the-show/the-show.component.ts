@@ -34,7 +34,7 @@ export class TheShowComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.showingOnBoarding.getPages().subscribe((showboards) =>(this.showBoard = showboards))
+    this.showingOnBoarding.getPages().subscribe((showboards) =>{console.log(showboards); console.log("running"); this.showBoard = showboards})
   }
 
 }

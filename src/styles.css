@@ -2,6 +2,11 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import '~fullpage.js/dist/fullpage.min.css';
 
-@import '~swiper/swiper.min.css';
-@import '~swiper/modules/navigation/navigation.min.css';
-@import '~swiper/modules/pagination/pagination.min.css';
+
+@import "~primeng/resources/themes/lara-light-blue/theme.css";
+@import '~primeicons/primeicons.css';
+@import '~primeng/resources/primeng.min.css';
+
+strong{
+  font-weight: 700 !important;
+}
