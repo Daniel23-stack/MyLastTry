@@ -1,3 +1,4 @@
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <app-navbar (onAddPage)="AddPage($event)" (onCreatedPage)="AddCreatedPage($event)"></app-navbar>
 
 <app-page-item *ngFor="let page of pages" [page]="page" (onClickedPageDelete)="deletePage(page)"></app-page-item>
@@ -8,6 +9,53 @@
                        (onClickedCreatedPageDelete)="deletePageCreated(myPage)"
                        (onEditedPAge)="updateEditedPage($event)"
 ></app-created-page-item>
+<!--<div class="container">-->
+<!--  <button mat-fab color="primary" (click)="clickMenu()"-->
+<!--          class="menu-button"-->
+<!--          [class.mat-elevation-z2]="!isOver"-->
+<!--          [class.mat-elevation-z8]="isOver"-->
+<!--          (mouseover)="isOver = true"-->
+<!--          (mouseleave)="isOver = false">-->
+
+<!--    <i class="material-icons" *ngIf="!openMenu">menu</i>-->
+<!--    <i class="material-icons" *ngIf="openMenu">close</i>-->
+<!--  </button>-->
+
+<!--  <button mat-mini-fab-->
+<!--          class="action-button one mat-elevation-z8"-->
+<!--          *ngIf="openMenu"-->
+<!--          color="basic"-->
+<!--          (click)="hello( 'button one')">-->
+<!--    <i class="material-icons">library_add</i>-->
+<!--  </button>-->
+
+<!--  <button mat-raised-button-->
+<!--          class="label labelone mat-elevation-z8"-->
+<!--          *ngIf="openMenu"-->
+<!--          color="basic"-->
+<!--          (click)="hello('button one')">-->
+<!--    ADD PAGE-->
+<!--  </button>-->
+
+<!--&lt;!&ndash;  <button mat-mini-fab&ndash;&gt;-->
+<!--&lt;!&ndash;          class="action-button two mat-elevation-z8"&ndash;&gt;-->
+<!--&lt;!&ndash;          *ngIf="openMenu"&ndash;&gt;-->
+<!--&lt;!&ndash;          color="basic"&ndash;&gt;-->
+<!--&lt;!&ndash;          (click)="hello('button two')">&ndash;&gt;-->
+<!--&lt;!&ndash;    <i class="material-icons">done_all</i>&ndash;&gt;-->
+<!--&lt;!&ndash;  </button>&ndash;&gt;-->
+<!--&lt;!&ndash;  <button mat-raised-button&ndash;&gt;-->
+<!--&lt;!&ndash;          class="label labeltwo mat-elevation-z8"&ndash;&gt;-->
+<!--&lt;!&ndash;          *ngIf="openMenu"&ndash;&gt;-->
+<!--&lt;!&ndash;          color="basic"&ndash;&gt;-->
+<!--&lt;!&ndash;          (click)="hello('button two')">&ndash;&gt;-->
+<!--&lt;!&ndash;    Say Hello Two&ndash;&gt;-->
+<!--&lt;!&ndash;  </button>&ndash;&gt;-->
+<!--</div>-->
+
+<script>
+  swal("Good job!", "You clicked the button!", "success");
+</script>
 
 <pre>{{created | json}}</pre>
 

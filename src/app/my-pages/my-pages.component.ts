@@ -60,4 +60,15 @@ export class MyPagesComponent implements OnInit {
   AddCreatedOnBoarding(createonBoarding: OnBoardingPage){
     this.onboardingPageService.AddCreatedOnboarding(createonBoarding).subscribe((createonBoarding)=>(this.onBoardingPages.push(createonBoarding)));
   }
+  //floating action button
+  public openMenu: boolean = false;
+  isOver = false;
+
+  clickMenu(){
+    this.openMenu = !this.openMenu;
+  }
+
+  hello(mex: string){
+    alert('Hello '+mex+'!' );
+  }
 }

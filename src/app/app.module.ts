@@ -9,8 +9,6 @@ import { NgxDynamicCarouselModule } from "ngx-dynamic-carousel";
 // @ts-ignore
 
 
-
-
 //froala import
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 import 'froala-editor/js/plugins.pkgd.min.js';
@@ -37,6 +35,13 @@ import {CarouselModule} from "primeng/carousel";
 import { SaveButtonComponent } from './save-button/save-button.component';
 import {FieldsetModule} from "primeng/fieldset";
 import {CardModule} from "primeng/card";
+import { FormBuilderComponent } from './form-builder/form-builder.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import {StyleClassModule} from 'primeng/styleclass';
+import {RippleModule} from "primeng/ripple";
+import {CommonModule} from "@angular/common";
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -53,10 +58,13 @@ import {CardModule} from "primeng/card";
     AddOnboardingComponent,
     TheShowComponent,
     SaveButtonComponent,
+    FormBuilderComponent,
+    LandingPageComponent,
 
 
   ],
     imports: [
+        CommonModule,
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
@@ -64,8 +72,9 @@ import {CardModule} from "primeng/card";
         AngularFullpageModule,
         BrowserAnimationsModule,
         SwiperModule,
+        StyleClassModule,
         NgxDynamicCarouselModule,
-        FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(), FormsModule, ButtonModule, CarouselModule,  CarouselModule, CarouselModule, FieldsetModule, CardModule
+        FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(), FormsModule, ButtonModule, CarouselModule, CarouselModule, CarouselModule, FieldsetModule, CardModule, RippleModule, MatButtonModule, MatIconModule
     ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
 

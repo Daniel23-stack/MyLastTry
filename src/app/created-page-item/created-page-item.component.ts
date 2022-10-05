@@ -16,6 +16,8 @@ export class CreatedPageItemComponent implements OnInit {
   // @ts-ignore
   @Input() createdPaige: CreatedPage;
 
+   currentId: string | null = null;
+
   // @ts-ignore
   @Input() createdOnBoarding : OnBoardingPage
 
@@ -48,7 +50,7 @@ export class CreatedPageItemComponent implements OnInit {
 
   //clearing the text editor
   cleartextEditor() {
-    this.pageContents = ""
+    this.createdPaige.pageContents = ""
     console.log("cleared");
   }
 
@@ -58,7 +60,10 @@ export class CreatedPageItemComponent implements OnInit {
       id:this.createdPaige.id
     };
     this.onEditedPAge.emit(newEditedPage);
-
+    this.currentId = null;
   }
 
+  selectPage( myId) {
+    this.currentId = myId;
+  }
 }
