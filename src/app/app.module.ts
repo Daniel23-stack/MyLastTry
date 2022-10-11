@@ -42,6 +42,7 @@ import {RippleModule} from "primeng/ripple";
 import {CommonModule} from "@angular/common";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
+import {AccordionModule} from "primeng/accordion";
 
 @NgModule({
   declarations: [
@@ -63,19 +64,19 @@ import {MatIconModule} from "@angular/material/icon";
 
 
   ],
-    imports: [
-        CommonModule,
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        CarouselModule,
-        AngularFullpageModule,
-        BrowserAnimationsModule,
-        SwiperModule,
-        StyleClassModule,
-        NgxDynamicCarouselModule,
-        FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(), FormsModule, ButtonModule, CarouselModule, CarouselModule, CarouselModule, FieldsetModule, CardModule, RippleModule, MatButtonModule, MatIconModule
-    ],
+  imports: [
+    CommonModule,
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    CarouselModule,
+    AngularFullpageModule,
+    BrowserAnimationsModule,
+    SwiperModule,
+    StyleClassModule,
+    NgxDynamicCarouselModule,
+    FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(), FormsModule, ButtonModule, CarouselModule, CarouselModule, CarouselModule, FieldsetModule, CardModule, RippleModule, MatButtonModule, MatIconModule, AccordionModule
+  ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
 
   providers: [],

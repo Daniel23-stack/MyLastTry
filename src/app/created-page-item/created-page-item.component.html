@@ -1,19 +1,37 @@
+<div class="container">
+  <p-accordion class="w-75 h-75">
+    <p-accordionTab class="w-2" header="{{currentId}}"  [selected]="true">
+      <ng-template pTemplate="header">PAGE {{createdPaige.id}}</ng-template>
+      <div [froalaView] ="createdPaige.pageContents"></div>
+      <div class="col-md-12 text-center">
+        <hr>
+        <footer>
+          <button  data-bs-toggle="modal" data-bs-placement="top" title="Edit Page"  [attr.data-bs-target]="'#exampleModal3' + createdPaige.id" class="btn btn-outline-primary m-1"><i class="fa-solid fa-file-pen fa-2x"></i></button>
+          <button  type="button " [routerLink]="['/show',]" data-bs-toggle="tooltip" data-bs-placement="top" title="Preview Page" class="btn btn-outline-success m-1"><i class="fa-solid fa-display fa-2x"></i></button>
+          <button (click)="deleteMyCreatedPage(createdPaige)"data-bs-toggle="tooltip" data-bs-placement="top" title="Delete Page" class="btn btn-outline-danger mt-1 m-1 "><i class="fa-solid fa-trash-can fa-2x"></i></button>
+        </footer>
+      </div>
+    </p-accordionTab>
+  </p-accordion>
+</div>
+
+
+
 
 <div class="container">
-  <div class="card text-center">
-    <div class="card-header"></div>
-    <div class="card-body">
-      <div [froalaView] ="createdPaige.pageContents"></div>
-    </div>
-    <div class="card-footer text-muted"></div>
-  </div>
+<!--  <div class="card text-center">-->
+<!--    <div class="card-header"></div>-->
+<!--    <div class="card-body">-->
+<!--      <div [froalaView] ="createdPaige.pageContents"></div>-->
+<!--    </div>-->
+<!--    <div class="card-footer text-muted"></div>-->
+<!--  </div>-->
 
-
-
-  <div class="col-md-12 text-center">
-    <button  data-bs-toggle="modal"   [attr.data-bs-target]="'#exampleModal3' + createdPaige.id" class="btn btn-primary m-1">Edit OnBoarding</button>
-    <button (click)="deleteMyCreatedPage(createdPaige)" class="btn btn-danger mt-1 m-1 mb-2">Delete Page</button>
-  </div>
+<!--  <div class="col-md-12 text-center">-->
+<!--    <button  data-bs-toggle="modal"   [attr.data-bs-target]="'#exampleModal3' + createdPaige.id" class="btn btn-primary m-1">Edit OnBoarding</button>-->
+<!--    <button  type="button " [routerLink]="['/show',]" class="btn btn-primary m-1"><i class="fa fa-fw fa-eye"></i>Preview OnBOARDING</button>-->
+<!--    <button (click)="deleteMyCreatedPage(createdPaige)" class="btn btn-danger mt-1 m-1 mb-2">Delete Page</button>-->
+<!--  </div>-->
 </div>
 
 <!--<div class="container">-->
@@ -51,5 +69,6 @@
   </div>
 </div>
 </form>
+
 
 

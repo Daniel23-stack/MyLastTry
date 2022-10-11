@@ -66,4 +66,6 @@ export class CreatedPageItemComponent implements OnInit {
   selectPage( myId) {
     this.currentId = myId;
   }
+  activeState: boolean[] = [true, false, false];
+
 }

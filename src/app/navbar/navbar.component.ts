@@ -71,6 +71,12 @@ export class NavbarComponent implements OnInit{
   //   this.cd.detectChanges();
   // }
 
+  // hiding and showing the button
+  show: boolean = false;
+
+
+
+
 
   AddNewLogo() {
 
@@ -98,7 +104,7 @@ export class NavbarComponent implements OnInit{
 
   onPublish() {
     if(!this.pageContents){
-      alert('Please Page Contents');
+      alert('Please Add Contents');
       return;
     }
     const newPageCreated = {

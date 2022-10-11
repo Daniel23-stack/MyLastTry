@@ -1,0 +1,20 @@
+#header-page{
+  height:150px;
+  background-image: url('src/assets/img/lights.jpg');
+  background-position: 0 -360px;
+  background-attachment: fixed;
+  color: #fff;
+  border-bottom: 1px #eeeeee solid;
+  margin-top: -90px;
+  padding-top:50px
+}
+.fa-info{
+  size: 500px;
+  color:#ffffff;
+}
+.fa-file{
+  color:#ffffff;
+}
+.fa-solid{
+  color:#ffffff;
+}

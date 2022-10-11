@@ -1,11 +1,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+
+<nav class="navbar navbar-expand-lg ">
   <div class="container">
     <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent d-grid gap-2 d-md-flex justify-content-md-end">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#"></a>
@@ -15,14 +16,14 @@
 <!--          <button type="button " routerLink="/formBuilder" class="btn btn-info m-1"><i class="fa fa-fw fa-file"></i>Form Builder</button>-->
 <!--        </li>-->
         <li class="nav-item">
-          <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info m-1"><i class="fa fa-fw fa-pencil"></i>Add Page</button>
+          <button data-bs-toggle="tooltip"  data-bs-placement="bottom" title="ADD PAGE" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline p-button-raised m-1"><i class="fa-solid fa-file-circle-plus fa-3x"></i></button>
         </li>
         <li class="nav-item">
-          <button type="button " routerLink="/show" class="btn btn-primary m-1"><i class="fa fa-fw fa-eye"></i>Preview OnBOARDING</button>
+          <button *ngIf="show" type="button " routerLink="/show" class="btn btn-primary m-1"><i class="fa fa-fw fa-eye"></i>Preview OnBOARDING</button>
         </li>
       </ul>
 
-        <button type="button " routerLink="#" class="btn btn-warning m-1"> <i class="fa fa-fw fa-info"></i></button>
+        <button type="button"data-bs-toggle="tooltip" data-bs-placement="bottom" title="INFO" data-bs-toggle="modal" data-bs-target="#exampleModal4"  class="btn btn-outline m-1"> <i class="fa-solid fa-circle-info fa-3x"></i></button>
       <form class="d-flex">
 <!--        <button class="btn btn-primary m-1" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2">ADD PAGE</button>-->
 <!--        <button class="btn btn-primary m-1 disabled" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">PAGE BUILDER</button>-->
@@ -30,6 +31,13 @@
     </div>
   </div>
 </nav>
+<!--header to display-->
+<header id="header-page">
+  <div class="container">
+
+  </div>
+</header>
+
 <!--<div id="selection_box" class="selectorBox">-->
 <!--  <iframe src="http://localhost:9000" style="height: 100%;width: 100%;" frameborder="0"></iframe>-->
 <!--</div>-->
@@ -81,9 +89,7 @@
 </form>
 
 
-
-
-<!--modal-->
+<!--creating page modal-->
 <form (ngSubmit)="onSubmit()">
 <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
   <div class="container-fluid">
@@ -136,4 +142,24 @@
 <!--    </div>-->
 <!--  </div>-->
 <!--</div>-->
+
+<!--info modal-->
+<div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="container-fluid">
+    <div class="modal-dialog modal-md  modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel4">Getting started</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
